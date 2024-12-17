@@ -1,0 +1,31 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+  injectWorkspacePackages: true
+
+importers:
+
+  packages/self-referential:
+    dependencies:
+      renamed-1:
+        specifier: workspace:self-reference@*
+        version: self-reference@file:packages/self-referential
+      renamed-2:
+        specifier: link:.
+        version: 'link:'
+      self-reference:
+        specifier: workspace:*
+        version: file:packages/self-referential
+
+packages:
+
+  self-reference@file:packages/self-referential:
+    resolution: {directory: packages/self-referential, type: directory}
+
+snapshots:
+
+  self-reference@file:packages/self-referential:
+    dependencies:
+      renamed-2: 'link:'

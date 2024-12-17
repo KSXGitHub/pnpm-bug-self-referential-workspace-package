@@ -1,0 +1,9 @@
+{
+  "name": "self-reference",
+  "version": "0.0.0",
+  "dependencies": {
+    "self-reference": "workspace:*",
+    "renamed-1": "workspace:self-reference@*",
+    "renamed-2": "link:."
+  }
+}
